@@ -3,6 +3,7 @@ public class DiscountByItensAmount extends DiscountHandler {
 
     public DiscountByItensAmount(float discountPercentage, int minAmount) {
         super(discountPercentage);
+        this.minAmount = minAmount;
     }
 
     public int getMinAmount() {

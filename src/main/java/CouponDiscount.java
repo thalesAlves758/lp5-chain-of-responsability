@@ -16,7 +16,7 @@ public class CouponDiscount extends DiscountHandler {
     }
 
     public float applyDiscount(Order order) {
-        if(order.getCoupon().getIdentifier().equals(couponIdentifier)) {
+        if(order.getCoupon() != null && order.getCoupon().getIdentifier().equals(couponIdentifier)) {
             return order.calculateTotalValue() * (this.getDiscountPercentage() / 100);
         } else if(this.getNextDiscountHandler() != null) {
             return this.getNextDiscountHandler().applyDiscount(order);

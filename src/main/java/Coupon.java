@@ -1,7 +1,7 @@
 public class Coupon {
     private String identifier;
 
-    public Coupon(String identifier, float discountPercentage) {
+    public Coupon(String identifier) {
         this.identifier = identifier;
     }
 

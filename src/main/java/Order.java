@@ -10,8 +10,11 @@ public class Order {
         this.items = new ArrayList<>();
     }
 
-    public void addProduct(Product product) {
-        this.items.add(new OrderItem(product));
+    public void addProduct(Product product, int amount) {
+        OrderItem orderItem = new OrderItem(product);
+        orderItem.setAmount(amount);
+
+        this.items.add(orderItem);
     }
 
     public void removeProduct(Product product) {
